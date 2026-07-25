@@ -13,8 +13,11 @@ export default function Hero() {
   const heroRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    setMounted(true);
-    getProfile().then(setProfile).catch(console.error);
+    const raf = requestAnimationFrame(() => {
+      setMounted(true);
+      getProfile().then(setProfile).catch(console.error);
+    });
+    return () => cancelAnimationFrame(raf);
   }, []);
 
   return (

@@ -42,7 +42,6 @@ export default function CTASection() {
               e.preventDefault();
               const formData = new FormData(e.currentTarget);
               const name = formData.get("name");
-              const email = formData.get("email");
               const message = formData.get("message");
               window.location.href = `mailto:${profile?.email || "contact@example.com"}?subject=Portfolio Contact from ${name}&body=${message}`;
             }}>

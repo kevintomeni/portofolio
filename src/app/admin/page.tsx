@@ -437,7 +437,7 @@ export default function AdminPage() {
 
               {(!profile.stacks || profile.stacks.length === 0) && (
                 <div className="text-center py-20 rounded-2xl bg-white/[0.02] border border-white/5">
-                  <p className="text-gray-500">Aucune stack. Cliquez sur "+ Categorie" pour commencer.</p>
+                      <p className="text-gray-500">Aucune stack. Cliquez sur &quot;+ Categorie&quot; pour commencer.</p>
                 </div>
               )}
             </div>

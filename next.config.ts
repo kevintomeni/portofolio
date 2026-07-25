@@ -11,6 +11,13 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  poweredByHeader: false,
+  reactStrictMode: true,
+  compress: true,
+  productionBrowserSourceMaps: false,
+  experimental: {
+    optimizePackageImports: ["react", "react-dom"],
+  },
 };
 
 export default nextConfig;

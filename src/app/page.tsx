@@ -1,11 +1,15 @@
+"use client";
+
+import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
-import ProjectsSection from "@/components/ProjectsSection";
-import AboutSection from "@/components/AboutSection";
-import SkillsSection from "@/components/SkillsSection";
-import PresentationSection from "@/components/PresentationSection";
-import CTASection from "@/components/CTASection";
+
+const Hero = dynamic(() => import("@/components/Hero"), { ssr: false });
+const PresentationSection = dynamic(() => import("@/components/PresentationSection"), { ssr: false });
+const SkillsSection = dynamic(() => import("@/components/SkillsSection"), { ssr: false });
+const ProjectsSection = dynamic(() => import("@/components/ProjectsSection"), { ssr: false });
+const AboutSection = dynamic(() => import("@/components/AboutSection"), { ssr: false });
+const CTASection = dynamic(() => import("@/components/CTASection"), { ssr: false });
 
 export default function Home() {
   return (
